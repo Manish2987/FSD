@@ -1,0 +1,25 @@
+.news-card-row{
+	/* text-align: -webkit-center; */
+}
+.news-section-wrapper{
+	clear: both;
+}
+.news-section{
+	
+}
+.headlines {
+	border-right : 1px solid gray !important;
+}
+.category{
+	border-left : 1px solid gray !important;
+}
+.news-category-wrapper{
+	margin-top: 10px;
+	display : flex; 	
+}
+.news-category-selector{
+	margin-left: 1em;
+	width: 20% !important;
+	min-width: 200px;
+	
+}

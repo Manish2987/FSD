@@ -1,0 +1,48 @@
+<!-- <section id="headlines" class="headlines">
+
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+                <app-carousal-news-card [news]="news" *ngFor="let news of newsHeadlines"></app-carousal-news-card>            
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleSlidesOnly" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleSlidesOnly" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+</section> -->
+<div class="row news-section-wrapper">
+    <section id="headlines" class="headlines col-sm-12 col-md-6 col-lg-3 news-section">
+        <div class="news-c-news-container text-center">
+            <label class='error-message'>{{ errMessage }}</label>
+            <h4 class="col-12">Today's Headlines</h4>
+            <div class="news-card-row">
+                <app-news-card [news]="news" *ngFor="let news of newsHeadlines"></app-news-card>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="category" class="category col-9 col-sm-12 col-md-6 col-lg-9 news-section">
+        <div class="news-c-news-container text-center">
+            <label class='error-message'>{{ errMessage }}</label>
+             <!-- <h2 class="col-12">{{currentCategory}} News</h2>  -->
+
+            <div class="form-group col-4 news-category-wrapper">
+                <h6 class="text-center mb-2 mt-2">Select Category</h6>
+                <select name="category-drop-down" id="category-drop-down" class="form-control bg-light text-black news-category-selector" [(ngModel)]="currentCategory"
+                    (change)="onChange()">
+                    <option *ngFor="let category of categoryList" [ngValue]="category">{{ category }}</option>
+                </select>
+            </div>
+
+            <div class="row news-card-row">
+                <app-news-card [news]="news" *ngFor="let news of newsCategoryWise"></app-news-card>
+            </div>
+        </div>
+    </section>
+</div>

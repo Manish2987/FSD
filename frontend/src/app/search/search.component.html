@@ -1,0 +1,9 @@
+<section id="search" class="search col-9 col-sm-12 col-md-6 col-lg-12">
+    <div class="news-c-news-container text-center">
+        <label class='error-message'>{{ errMessage }}</label>
+        <h2 class="col-12">Search Results</h2>
+        <div class="row news-card-row">
+            <app-news-card [news]="news" *ngFor="let news of newsSearch"></app-news-card>
+        </div>
+    </div>
+</section>

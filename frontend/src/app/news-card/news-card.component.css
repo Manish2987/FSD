@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+.news-card {
+    max-width: 400px;
+    min-width: 200px;
+	  display:flex;
+	  flex-direction:column;
+	  width:20vw;
+    margin:1vw; 
+}  
+.news-poster {
+  /*background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');*/
+  background-size: cover;
+}
+.news-c-toggle-favorite{
+  float:right;
+  color:black;
+  cursor: pointer;
+}
+.favorite-icon-active{
+  color: red;
+}
+.favorite-icon-inactive{
+  color: darkgray;
+}
+  

@@ -1,0 +1,29 @@
+.news-c-register-expansion-panel
+{
+	width:50vw;
+	margin:auto;
+	margin-top:20px;
+}
+.news-c-register-form
+{
+	display:flex;
+	flex-direction:column;	
+}
+.news-c-reg-btn-wrapper
+{
+	float: left;
+	/* display:contents; */
+	justify-content:flex-end;
+	margin: 20px !important;
+}
+.news-c-register-panel{
+	display: block;
+	margin: auto;
+}
+.error-message{
+	font-size: small;
+    color: red;
+}
+.news-c-btn-div-wrapper{
+	display: block;
+}

@@ -1,0 +1,26 @@
+.news-c-login-expansion-panel
+{
+	width:50vw;
+	margin:auto;
+	margin-top:20px;
+}
+.news-c-login-form
+{
+	display:flex;
+	flex-direction:column;
+	
+}
+.news-c-done-btn-wrapper
+{
+	float: left;
+	/* display:contents; */
+	justify-content:flex-end;
+	margin: 20px !important;	
+}
+.news-c-login-panel{
+	display: block;
+	margin: auto;
+}
+.news-c-btn-div-wrapper{
+	display: block;
+}

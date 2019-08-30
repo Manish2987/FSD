@@ -1,0 +1,24 @@
+<div class="col-12 col-sm-12 col-md-3 col-lg-3">
+  <mat-card class="news-card">
+    <mat-card-header>
+      <div mat-card-avatar class="news-poster"></div>
+      <mat-card-title name="news-title" class="news-title" >{{news.title}}</mat-card-title>
+      <mat-card-subtitle></mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image name="news-poster" src="{{news.urlToImage}}" alt="{{news.title}}">
+    <mat-card-content>
+      <p class="news-text">
+        {{news.description}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <div class="news-c-toggle-favorite">
+        <i *ngIf="isFavorite" (click)='addToFavorite(false)' class="unfavorite-btn material-icons favorite-icon-active">favorite</i>
+        <i *ngIf="!isFavorite" (click)='addToFavorite(true)' class="favorite-btn material-icons favorite-icon-inactive">favorite_border</i>
+      </div>
+    </mat-card-actions>
+    <div class="error-message">
+      {{ this.errMessage }}
+    </div>
+  </mat-card>
+</div>

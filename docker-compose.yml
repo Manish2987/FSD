@@ -1,0 +1,28 @@
+version: "3"
+services:
+    db:
+        image: "mcr.microsoft.com/mssql/server"
+        environment:
+            SA_PASSWORD: "password@123"
+            ACCEPT_EULA: "Y"
+    authapi:
+        image: authapi
+        ports:
+            - "8082:80"
+        depends_on:
+            - db
+        restart: on-failure
+    app:
+        image: newsapp
+        ports:
+            - "4200:4200"
+        depends_on:
+            - webapi
+            - authapi
+    webapi:
+        image: newsapi
+        ports:
+            - "8081:80"
+        depends_on:
+            - db
+        restart: on-failure

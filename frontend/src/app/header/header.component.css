@@ -1,0 +1,16 @@
+.news-c-header-toolbar{
+    display: contents;
+}
+
+.news-c-header-search-btn-wrapper
+{
+	display:flex;
+	justify-content:flex-end;
+	background-color: cornflowerblue;
+	border-radius: 10%;
+	color:white;
+}
+.news-nav-link{
+	color: white!important;
+	cursor: pointer;
+}

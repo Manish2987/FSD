@@ -1,0 +1,55 @@
+<div class='news-c-register-expansion-panel'>
+  <mat-card class="news-c-register-panel  col-sm-12 col-md-8 col-lg-6  text-center">
+    <mat-card-header>
+      <mat-card-title>
+        <h3>Register</h3>
+      </mat-card-title>
+    </mat-card-header>
+    <div class='news-c-register-form'>
+      <form>
+        <mat-form-field>
+          <input class="firstname" matInput [formControl]='firstname' placeholder="First Name" />
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+          <input class="lastname" matInput [formControl]='lastname' placeholder="Last Name" />
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+          <input class="email" matInput [formControl]='email' placeholder="Email" email="true" />
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+          <input class="username" matInput [formControl]='username' placeholder="User Name" />
+        </mat-form-field>
+        <div class="error-message">
+          {{ this.uniqueUsernameMessage }}
+        </div>
+        <br>
+        <mat-form-field>
+          <input class="password" matInput type="password" [formControl]='password' placeholder="Password" />
+        </mat-form-field>
+        <mat-form-field>
+          <input class="passwordConfirm" matInput type="password" [formControl]='passwordconfirm'
+            placeholder="Confirm Password" />
+        </mat-form-field>
+        <div class="error-message">
+          {{ this.passwordMismatchMessage }}
+        </div>
+
+        <div class="news-c-btn-div-wrapper">
+          <div class='news-c-reg-btn-wrapper'>
+              <button mat-raised-button (click)='routeToLogin()'>Login</button>
+          </div>
+
+          <div class='news-c-reg-btn-wrapper'>
+            <button mat-raised-button (click)='registerUser()' color="primary">Register</button>
+          </div>
+        </div>
+        <div class="error-message">
+          {{ this.submitMessage }}
+        </div>
+      </form>
+    </div>
+  </mat-card>
+</div>
